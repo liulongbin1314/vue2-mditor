@@ -22,7 +22,7 @@ export default {
 
     //获取或设置编辑器的值
     mditor.on("ready", () => {
-      mditor.value = this.initVal + "" || "";
+      mditor.value = this.initVal === undefined ? "" : this.initVal + "";
     });
   },
   props: ["initVal"], // 初始化的文本内容
