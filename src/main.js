@@ -1,2 +1,9 @@
-// 项目的JS打包入口文件
-console.log('ok')
+import Vue from 'vue'
+
+// 导入测试的根组件
+import App from './App.vue'
+
+new Vue({
+  el: '#app',
+  render: c => c(App)
+})
