@@ -15,38 +15,38 @@ npm i vue2-mditor -S
 
 ## Usage
 1. 在需要的 `.vue` 组件中，导入 `vue2-mditor` 编辑器：
-```
-import editor from "vue2-mditor";
-```
+    ```
+    import editor from "vue2-mditor";
+    ```
 2. 使用组件的 `components` 属性，将 `editor` 注册为私有组件：
-```
-components: {
-  editor
-}
-```
-3. 将注册的组件名称，以标签形式，引入到对应的`template` 中即可：
-```
-<editor :initVal="'**hello world**'" ref="editor"></editor>
-```
-4. 初始化文本：为属性绑定 `:initVal` 提供字符串的值，来初始化编辑器的文本内容：
-```
-<editor :initVal="'**这是初始化的文本内容**'"></editor>
-```
-5. 获取原始的 `markdown` 文本
- + 添加 `ref` 属性：
-  ```
-  <editor ref="editor"></editor>
-  ```
-  + 使用 `$refs.引用名称.getValue()` 获取文本值：
-  ```
-  methods: {
-    getVal() {
-      // 点击按钮，获取编辑器的数据
-      var txt = this.$refs.editor.getValue();
-      console.log(txt);
+    ```
+    components: {
+      editor
     }
-  }
-  ```
+    ```
+3. 将注册的组件名称，以标签形式，引入到对应的`template` 中即可：
+    ```
+    <editor :initVal="'**hello world**'" ref="editor"></editor>
+    ```
+4. 初始化文本：为属性绑定 `:initVal` 提供字符串的值，来初始化编辑器的文本内容：
+    ```
+    <editor :initVal="'**这是初始化的文本内容**'"></editor>
+    ```
+5. 获取原始的 `markdown` 文本
+    + 添加 `ref` 属性：
+      ```
+      <editor ref="editor"></editor>
+      ```
+    + 使用 `$refs.引用名称.getValue()` 获取文本值：
+      ```
+      methods: {
+        getVal() {
+          // 点击按钮，获取编辑器的数据
+          var txt = this.$refs.editor.getValue();
+          console.log(txt);
+        }
+      }
+      ```
 
 
 ## Examples
