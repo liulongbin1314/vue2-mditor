@@ -25,7 +25,15 @@ module.exports = {
       // 可以使用?给 url-loader传递参数，其中，有一个固定的参数，叫做 limit，表示图片的大小，需要给定一个 数值；
       // limit 给定的这个数值，是 图片的大小，单位是 Byte（字节）
       // 如果指定了 limit 参数，则只有图片的大小，小于给定的 值时候，才会转为base64格式的图片；否则，就不转换；
-      { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, // 添加转换JS文件的loader，其中，必须把 node_modules 目录设置为 排除项，这样，在打包的时候，会忽略node_modules 目录下的所有JS文件；否则项目运行不起来！
+      {
+        test: /\.js$/, use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: ["transform-runtime", "transform-remove-strict-mode"],
+            presets: ["env", "stage-0"]
+          }
+        }, exclude: /node_modules/
+      }, // 添加转换JS文件的loader，其中，必须把 node_modules 目录设置为 排除项，这样，在打包的时候，会忽略node_modules 目录下的所有JS文件；否则项目运行不起来！
       { test: /\.vue$/, use: 'vue-loader' }, // 转换vue模板文件的loader
       { test: /\.ttf|woff|woff2|eot|svg$/, use: 'url-loader' } // 转换字体文件
     ]

@@ -1,16 +1,30 @@
 {
-  "name": "webpack-study",
+  "name": "vue2-mditor",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/editor/index.js",
+  "description": "支持 Vue 并允许插入 base64 格式图片的，简洁 markdown 文本编辑器",
+  "main": "src/editor/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --port 3000 --host 127.0.0.1 --hot",
-    "pub": "webpack --config webpack.publish.config.js"
+    "dev": "webpack-dev-server --open --port 3000 --host 127.0.0.1 --hot"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vue-editor",
+    "vue-mditor",
+    "vue2-mditor",
+    "markdown",
+    "editor"
+  ],
+  "author": "liulongbin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daidaitu1314/vue2-mditor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/daidaitu1314/vue2-mditor/issues"
+  },
+  "dependencies": {
+    "vue": "^2.5.13"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -33,8 +47,5 @@
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
-  },
-  "dependencies": {
-    "vue": "^2.5.13"
   }
 }
