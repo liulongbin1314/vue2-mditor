@@ -68,7 +68,7 @@ npm i vue2-mditor -S
 
 <script>
 // 1. 导入 编辑器
-import editor from "./editor/index.js";
+import editor from "vue2-mditor";
 
 export default {
   data() {
