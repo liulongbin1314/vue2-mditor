@@ -8,7 +8,7 @@
 ![](https://img.shields.io/npm/v/vue2-mditor.svg)
 
 ## Capture
-![](./capture.png)
+![capture](./capture.png)
 
 ## Requirements
 [vue](https://github.com/vuejs/vue)
